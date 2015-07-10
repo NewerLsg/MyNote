@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    style="@style/common_bg"  >
+
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content">
+        <TextView android:id="@+id/account_add_title" android:layout_width="fill_parent"
+             style="@style/common_title"   android:background="@drawable/common_title_bg_no_shadow" 
+            android:layout_height="wrap_content" android:text="@string/account_add_title"/>
+    </LinearLayout>
+    
+   	<FrameLayout android:layout_width="fill_parent" android:layout_height="fill_parent" >
+    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="vertical">
+   	   	 <LinearLayout android:layout_width="fill_parent" android:layout_height="0dp" android:orientation="vertical" android:layout_weight="1.0">
+       		<LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            style="@style/common_row_layout_top">
+            
+			<TextView 
+			    android:layout_width="75.0dip" 
+			    android:textColor="@color/white" 
+			    android:text="@string/account_add_name"
+				style="@style/form_row_label" />
+
+			<EditText
+			    android:id="@+id/account_add_accountname"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:background="@drawable/sync_panel_et"
+			    android:ems="10"
+			    android:gravity="end|center"
+			    android:layout_gravity="center" 
+			    android:layout_marginTop="2.0dip"
+			    android:layout_marginRight="20.0dip"
+			    android:layout_marginLeft="20.0dip"
+			    android:singleLine="true"
+			     android:textColor="@color/white" >
+			</EditText>
+            
+        </LinearLayout>"
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content"  
+            android:orientation="horizontal"
+            style="@style/common_row_layout_middle">
+
+            	<TextView 
+			    	android:layout_width="75.0dip" 
+			   	 	android:textColor="@color/white" 
+			  		android:text="@string/account_add_balance"
+					style="@style/form_row_label" />
+            	     	
+            	<EditText
+				    android:id="@+id/account_add_balance"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:background="@drawable/sync_panel_et"
+				    android:ems="10"
+				    android:gravity="end|center"
+				    android:layout_gravity="center"
+				    android:layout_marginRight="20.0dip"
+				    android:layout_marginTop="2.0dip"
+				    android:layout_marginLeft="20.0dip"
+				    android:singleLine="true"
+				    android:textColor="@color/white" />
+        </LinearLayout>
+        
+       	<FrameLayout android:layout_width="fill_parent"
+       	    android:layout_height="wrap_content">
+        
+			<Spinner android:id="@+id/account_add_firstlevelcategory"
+				android:paddingLeft="200dp" android:layout_width="fill_parent"
+				android:layout_height="wrap_content" style="@style/common_row_layout_middle" 
+				android:gravity="right"
+				android:entries="@array/TBL_ACCOUNT_TYPE"/>
+			
+			<TextView android:layout_width="75.0dip" android:text="@string/account_add_category" android:textColor="@color/white"
+				style="@style/form_row_label"  />
+			
+			<ImageView android:layout_gravity="right|center"
+				android:id="@+id/first_level_accountgroup_detail_iv"
+				android:layout_marginRight="15.0dip" style="@style/go_detail" />
+		</FrameLayout>
+		
+       	 <FrameLayout android:layout_width="fill_parent"
+			android:layout_height="wrap_content">
+			<Spinner android:id="@+id/account_add_subcategory"
+				android:paddingRight="15.0dip" android:layout_width="fill_parent"
+				android:paddingLeft="200.0dip"
+				android:background="@drawable/common_row_layout_bottom"
+				android:layout_height="wrap_content" style="@style/common_row_layout_middle" />
+			
+			<TextView android:layout_width="75.0dip" android:text="@string/account_add_subcategory" android:textColor="@color/white"
+				style="@style/form_row_label" />
+			
+			<ImageView android:layout_gravity="right|center"
+				android:id="@+id/subaccountgroup_detail_iv"
+				android:layout_marginRight="15.0dip" style="@style/go_detail" />
+       	 </FrameLayout>
+       	
+  		 </LinearLayout>
+     	 <LinearLayout  android:orientation="horizontal" android:layout_width="fill_parent" android:layout_height="wrap_content"    
+           			style="@style/common_add_toolbar"
+           			android:layout_marginBottom="1px" > 
+            <Button  android:id="@+id/account_add_comfirm" style="@style/common_toolbar_btn"  android:layout_marginRight="10.0dip" android:text="@string/account_add_comfirm" />
+            <Button android:id="@+id/account_add_cancel"  style="@style/common_toolbar_btn" android:layout_marginLeft="10.0dip" android:text="@string/account_add_cancel"  />   
+   		  </LinearLayout>
+    </LinearLayout>
+	<RelativeLayout
+	       android:layout_width="fill_parent"
+	       android:layout_height="wrap_content" >
+		   <android.inputmethodservice.KeyboardView
+			     android:id="@+id/keyboard_view"
+			      android:layout_width="fill_parent"
+			            android:layout_height="wrap_content"
+			            android:layout_alignParentBottom="true"		            
+			            android:windowSoftInputMode="stateAlwaysHidden|adjustPan"
+			            android:focusable="true"
+			            android:focusableInTouchMode="true"
+			            android:background="@color/lightblack"
+			            android:keyBackground="@drawable/btn_keyboard_key" 
+			            android:keyTextColor="@color/white"
+			            android:visibility="gone" />
+	</RelativeLayout>	
+	</FrameLayout>
+</LinearLayout>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>    
+    <dimen name="nav_btn_hdpi">120.00px</dimen>   
+    <dimen name="nav_account_btn_margin_left">60px</dimen>
+    <dimen name="nav_budget_btn_margin_left">115px</dimen>
+</resources>
